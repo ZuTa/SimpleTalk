@@ -1,0 +1,46 @@
+﻿<Window x:Class="SimpleTalk.Windows.IMWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="IMWindow" Height="437" Width="659" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" MinHeight="250" MinWidth="250" Icon="/SimpleTalk;component/Images/google_talk%20%281%29.ico">
+    <DockPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition/>
+                <RowDefinition Height="85"/>
+            </Grid.RowDefinitions>
+            <DockPanel Grid.Row="0" Background="#FFD2DAFC">
+                <ToolBar Name="toolBar1">
+                    <Button Name="btnHistory" Click="btnHistory_Click">
+                        <Image Source="/SimpleTalk;component/Images/folder_history.png" ToolTip="Історія повідомлень" />
+                    </Button>
+                    <Button Name="btnDetails" Click="btnDetails_Click">
+                        <Image Source="/SimpleTalk;component/Images/preferences_desktop_user.png" ToolTip="Інформація"/>
+                    </Button>
+                </ToolBar>
+            </DockPanel>
+            <DockPanel Grid.Row="1">
+                <RichTextBox Name="messages" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Auto" IsReadOnly="True" Focusable="True">
+                    <RichTextBox.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0" >
+                            <GradientStop Offset="0" Color="White" />
+                            <GradientStop Offset="1" Color="#FFE8DFDF" />
+                        </LinearGradientBrush>
+                    </RichTextBox.Background>
+                </RichTextBox>
+            </DockPanel>
+            <DockPanel Grid.Row="2">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="50"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Name="message" IsReadOnly="False" IsEnabled="True" TextChanged="message_TextChanged" KeyDown="message_KeyDown" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" />
+                        <Button Grid.Column="1" Name ="btnSend" Click="Button_Click" IsEnabled="False" ToolTip="Відправити">
+                            <Image Source="/SimpleTalk;component/Images/send_email_user_alternative.png"></Image>
+                        </Button>
+                </Grid>
+            </DockPanel>
+        </Grid>
+    </DockPanel>
+</Window>

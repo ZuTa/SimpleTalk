@@ -1,0 +1,63 @@
+﻿<Window x:Class="SimpleTalk.Windows.FindUsersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Знайти друзів" WindowStartupLocation="CenterOwner" WindowStyle="ToolWindow" Background="White" mc:Ignorable="d" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Height="370" Width="400" AllowsTransparency="False">
+    <DockPanel>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+            <DockPanel>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition Width="50"/>
+                    </Grid.ColumnDefinitions>
+                
+                    <TextBox Name="tbPattern" Margin="5,10,10,10" />
+                    <Button Grid.Column="2" Name="btnFind" Click="btnFind_Click" ToolTip="Знайти">
+                        <Image Source="/SimpleTalk;component/Images/system_search.png"></Image>
+                    </Button>
+                </Grid>
+            </DockPanel>
+            <DockPanel Grid.Row="1" Margin="0,5">
+                <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Hidden">
+                    <ListView Grid.Row="1" Name="listView">
+                        <ListView.Background>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0" >
+                                <GradientStop Offset="0" Color="White" />
+                                <GradientStop Offset="1" Color="#FFE8DFDF" />
+                            </LinearGradientBrush>
+                        </ListView.Background>
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="#" Width="30" DisplayMemberBinding="{Binding N}" />
+                                <GridViewColumn Header="ID" Width="0" DisplayMemberBinding="{Binding ID}" />
+                                <GridViewColumn Header="Нік" Width="90" DisplayMemberBinding="{Binding Login}" />
+                                <GridViewColumn Width="90" DisplayMemberBinding="{Binding FirstName}" Header="Ім'я" />
+                                <GridViewColumn Width="90" DisplayMemberBinding="{Binding LastName}" Header="Прізвище" />
+                                <GridViewColumn Width="65" DisplayMemberBinding="{Binding UserStatus}" Header="Статус" />
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </ScrollViewer>
+            </DockPanel>
+            <DockPanel Grid.Row="2" FlowDirection="RightToLeft">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60"/>
+                        <ColumnDefinition Width="60"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Margin="5,0" Grid.Row="2" Name="btnCancel" Click="btnCancel_Click" ToolTip="Закрити">
+                        <Image Source="/SimpleTalk;component/Images/fileclose.png" />
+                    </Button>
+                    <Button Margin="5,0" Grid.Column="1" Name="btnSendRequest" Click="btnSendRequest_Click" ToolTip="Відправити запит">
+                        <Image Source="/SimpleTalk;component/Images/send_email_user_alternative.png"></Image>
+                    </Button>
+                </Grid>
+            </DockPanel>
+        </Grid>
+    </DockPanel>
+</Window>

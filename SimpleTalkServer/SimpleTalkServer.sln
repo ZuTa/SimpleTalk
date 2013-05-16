@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleTalkServer", "SimpleTalkServer\SimpleTalkServer.csproj", "{63B250A9-B070-434E-8E72-05CB5DD709AF}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupSimpleTalkServer", "SetupSimpleTalkServer\SetupSimpleTalkServer.vdproj", "{80896946-8A3B-4BA1-A07C-AA39F26362F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63B250A9-B070-434E-8E72-05CB5DD709AF}.Debug|x86.ActiveCfg = Debug|x86
+		{63B250A9-B070-434E-8E72-05CB5DD709AF}.Debug|x86.Build.0 = Debug|x86
+		{63B250A9-B070-434E-8E72-05CB5DD709AF}.Release|x86.ActiveCfg = Release|x86
+		{63B250A9-B070-434E-8E72-05CB5DD709AF}.Release|x86.Build.0 = Release|x86
+		{80896946-8A3B-4BA1-A07C-AA39F26362F6}.Debug|x86.ActiveCfg = Debug
+		{80896946-8A3B-4BA1-A07C-AA39F26362F6}.Release|x86.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

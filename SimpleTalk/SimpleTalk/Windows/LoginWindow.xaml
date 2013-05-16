@@ -1,0 +1,51 @@
+﻿<Window x:Class="SimpleTalk.Windows.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Ввійти" Height="350" Width="300" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <DockPanel>
+            <Image Source="/SimpleTalk;component/Images/business_man_blue1.png"></Image>
+        </DockPanel>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Row="0" Grid.Column="0" Content="Логін" Height="28"/>
+                <TextBox Margin="5" Grid.Row="0" Grid.Column="1" Height="23" Name="tbLogin" TabIndex="0" />
+                <Label Grid.Row="1" Grid.Column="0" Content="Пароль" Height="28"/>
+                <PasswordBox Margin="5" Grid.Row="1" Grid.Column="1" Height="23" Name="pbPassowrd" PasswordChar="*"/>
+            </Grid>
+            <Grid Grid.Row="1" Margin="5">
+                <CheckBox Name="RememberLogin" Content="Запам'ятати логін та пароль"></CheckBox>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2" FlowDirection="RightToLeft">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+            </Grid.ColumnDefinitions>
+            <Button Margin="5,0" Grid.Column="1" Height="50" Name="btnLogin" Click="btnLogin_Click" ToolTip="Увійти">
+                <Image Source="/SimpleTalk;component/Images/play1disabled.png"></Image>
+            </Button>
+            <Button Margin="5,0" Name="btnCancel" Click="btnCancel_Click" ToolTip="Відмінити">
+                <Image Source="/SimpleTalk;component/Images/fileclose.png"></Image>
+            </Button>
+
+        </Grid>
+    </Grid>
+</Window>
