@@ -3,4 +3,4 @@ SimpleTalk
 
 Pure implementation of instant messenger
 
-It is a first try for implement client-server app
+It is an exercise-project for a client-server app
